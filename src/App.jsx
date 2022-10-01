@@ -6,7 +6,9 @@ import Kanto from "./image/Medalla_Arco.png";
 
 const App = () => {
   const URLs = "https://pokeapi.co/api/v2/pokemon/";
+  // eslint-disable-next-line
   const [Data, setData] = useState(null);
+  // eslint-disable-next-line
   const [Loading, setLoading] = useState(false);
   const [Pokemon, setPokemon] = useState({
     name: "",
