@@ -18,6 +18,10 @@ main {
       height: 610px;
       .insignia {
         padding: 9px 13px;
+        img {
+          height: 71px;
+          width: 71px;
+        }
       }
 
       .Pokemon {
@@ -39,13 +43,12 @@ main {
         }
       }
 
-      .tipos {
+      .untipos,
+      .dostipos {
         display: flex;
-        justify-content: center;
-        padding: 10px;
-        margin: 21px;
+        justify-content: space-between;
+        padding: 31px 72px;
         .tipo {
-          margin: 21px;
           background-color: #208c52;
           width: 130px;
           height: 35px;
@@ -56,16 +59,19 @@ main {
         }
       }
 
+      .untipos {
+        justify-content: flex-start;
+      }
+
       .cruzeta {
-        display: flex;
-        justify-content: start;
         margin-left: 45px;
         margin-bottom: 39px;
         width: 100%;
         height: 109px;
         .gridcruz {
           display: grid;
-          grid-template-columns: auto auto auto;
+          grid-template-columns: 36px 36px 36px;
+
           .centro {
             width: 36px;
             height: 36px;
@@ -106,52 +112,53 @@ main {
       background-color: #c33c3c;
       width: 415px;
       height: 610px;
-      .pantallaNegra {
-        margin-top: 118px;
-        margin-left: 26px;
-        width: 363px;
-        height: 171px;
-        background-color: #232323;
+      .containerPantalla {
         display: flex;
-        justify-content: space-evenly;
-        .pantalla_gris {
-          width: 90px;
-          height: 111px;
-          margin-top: 31px;
-          background-color: #d9d9d9;
-          font-size: 24px;
-          display: grid;
-          justify-content: center;
-          .caracteristica {
-            width: 100%;
-          }
-          .numero {
-            width: 100%;
-            height: 100%;
-            font-size: 50px;
+        justify-content: center;
+        padding-top: 118px;
+        .pantallaNegra {
+          width: 363px;
+          height: 171px;
+          background-color: #232323;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .pantalla_gris {
+            background-color: #d9d9d9;
+            width: 90px;
+            height: 111px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            .caracteristica {
+              font-size: 20px;
+            }
+            .numero {
+              font-size: 50px;
+            }
           }
-        }
-      }
-      .pantallaAzul {
-        width: 218px;
-        height: 104px;
-        margin-top: 45px;
-        margin-left: 42px;
-        background: #34a9d6;
-        border-radius: 0px 30px 0px 0px;
-        font-size: 35px;
-        display: grid;
-        .Nombre {
-          margin-top: 5px;
         }
       }
 
-      .circleContainer {
-        width: 100%;
+      .pantallaAzul {
+        background-color: white;
+        width: 218px;
+        height: 104px;
+        margin-top: 46px;
+        margin-left: 42px;
+        border-radius: 0 50px 0 0;
+        background-color: #34a9d6;
         display: flex;
-        justify-content: end;
+        flex-direction: column;
+        font-size: 24px;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .circleContainer {
+        display: flex;
+        justify-content: flex-end;
         .circulo {
           width: 70px;
           height: 70px;
