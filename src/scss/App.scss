@@ -64,13 +64,12 @@ main {
       }
 
       .cruzeta {
-        margin-left: 45px;
         margin-bottom: 39px;
-        width: 100%;
+        width: 30%;
         height: 109px;
         .gridcruz {
           display: grid;
-          grid-template-columns: 36px 36px 36px;
+          grid-template-columns: 10px 10px 10px;
 
           .centro {
             width: 36px;

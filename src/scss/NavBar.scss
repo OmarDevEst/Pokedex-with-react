@@ -1,6 +1,18 @@
 div {
   display: flex;
-  img {
-    width: 10%;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  .NavBar {
+    img {
+      width: 10%;
+      padding: 10px;
+      background-color: #c33c3c;
+      border-radius: 0 10px 0 0px;
+    }
+    .tipouno {
+      background-color: #c33c3c;
+      border-radius: 0 30px 0 0px;
+      padding: 10px;
+    }
   }
 }

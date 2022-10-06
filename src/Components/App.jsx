@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
 import Kanto from "../image/Medalla_Arco.png";
+import React from "react";
 
 const App = () => {
   const URLs = "https://pokeapi.co/api/v2/pokemon/";

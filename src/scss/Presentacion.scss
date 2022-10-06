@@ -1,0 +1,38 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .MaxCon {
+    background-color: #470505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 862px;
+    height: 677px;
+    .RedCon {
+      background-color: #c33c3c;
+      width: 95%;
+      height: 610px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .WhiteCon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 330px;
+        height: 330px;
+        border-radius: 30px;
+        img {
+          width: 290px;
+          height: 290px;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
