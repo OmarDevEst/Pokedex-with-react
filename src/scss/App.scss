@@ -1,4 +1,4 @@
-main {
+.Kanto {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,8 +14,8 @@ main {
     height: 677px;
     .pestana_izquierda {
       background-color: #c33c3c;
-      width: 415px;
-      height: 610px;
+      width: 48%;
+      height: 96%;
       .insignia {
         padding: 9px 13px;
         img {
@@ -67,9 +67,10 @@ main {
         margin-bottom: 39px;
         width: 30%;
         height: 109px;
+        margin-left: 10px;
         .gridcruz {
           display: grid;
-          grid-template-columns: 10px 10px 10px;
+          grid-template-columns: 36px 36px 36px;
 
           .centro {
             width: 36px;
@@ -109,8 +110,8 @@ main {
 
     .pestana_derecha {
       background-color: #c33c3c;
-      width: 415px;
-      height: 610px;
+      width: 48%;
+      height: 96%;
       .containerPantalla {
         display: flex;
         justify-content: center;

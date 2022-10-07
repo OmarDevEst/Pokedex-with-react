@@ -1,18 +1,37 @@
-div {
-  display: flex;
-  justify-content: space-evenly;
-  margin-left: 10px;
+.navBarContainer {
   .NavBar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 862px;
     img {
-      width: 10%;
+      width: 15%;
       padding: 10px;
       background-color: #c33c3c;
       border-radius: 0 10px 0 0px;
     }
-    .tipouno {
+    .PresentacionNav:hover,
+    .KantoNav:hover,
+    .Johto:hover,
+    .Hoenn:hover,
+    .Sinnoh:hover {
+      color: white;
+    }
+
+    .PresentacionNav,
+    .KantoNav,
+    .Johto,
+    .Hoenn,
+    .Sinnoh {
+      height: 80%;
       background-color: #c33c3c;
       border-radius: 0 30px 0 0px;
       padding: 10px;
+      min-width: 100px;
+      text-decoration: none;
+      color: black;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
     }
   }
 }

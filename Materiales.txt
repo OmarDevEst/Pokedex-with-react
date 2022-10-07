@@ -1,0 +1,27 @@
+-Tener node instalado
+-tener sass instalado
+-tener git instalado
+
+Crear app
+npx create-react-app my-app
+
+Instalar Sass
+yarn add sass
+
+Intalar Browserouter
+yarn add react-router-dom
+
+useEffect(() => {
+    fetch(url, { mode: 'cors' })
+      .then(res => res.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      });
+  }, [loading]);
+
+shift alt felcha  copia :3
+
+margin separar contenedotes
+
+padding adentro del contenedor

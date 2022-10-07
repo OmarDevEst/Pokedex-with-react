@@ -3,17 +3,19 @@ import NavBar from "./NavBar";
 import { useState } from "react";
 import { useEffect } from "react";
 import Kanto from "../image/Medalla_Arco.png";
+import Johto from "../image/Medalla_Catarina.png";
+import Hoenn from "../image/Medalla_corazon.webp";
+import Sinnoh from "../image/Medalla_Caparazon.webp";
 import React from "react";
 
-const App = () => {
-  const URLs = "https://pokeapi.co/api/v2/pokemon/";
+const App = ({ Medalla, LimiteSuperior, LimiteInferior, URLs }) => {
   // eslint-disable-next-line
   const [Data, setData] = useState(null);
   // eslint-disable-next-line
   const [Loading, setLoading] = useState(false);
   const [Pokemon, setPokemon] = useState({
     name: "",
-    pokedex: 1,
+    pokedex: LimiteInferior,
     weight: "",
     height: "",
   });
@@ -37,17 +39,18 @@ const App = () => {
 
   const derecha = () => {
     setiImage(0);
-    if (Pokemon.pokedex < 151) {
+    if (Pokemon.pokedex < LimiteSuperior) {
       setPokemon({ ...Pokemon, pokedex: Pokemon.pokedex + 1 });
     } else {
-      setPokemon({ ...Pokemon, pokedex: 1 });
+      setPokemon({ ...Pokemon, pokedex: LimiteInferior });
     }
   };
 
   const izquierda = () => {
+    console.log(Pokemon.pokedex);
     setiImage(0);
-    if (Pokemon.pokedex === 1) {
-      setPokemon({ ...Pokemon, pokedex: 151 });
+    if (Pokemon.pokedex === LimiteInferior) {
+      setPokemon({ ...Pokemon, pokedex: LimiteSuperior });
     } else {
       setPokemon({ ...Pokemon, pokedex: Pokemon.pokedex - 1 });
     }
@@ -59,7 +62,8 @@ const App = () => {
       .then((data) => {
         //set a data
         setData(data);
-        console.log(data);
+        console.log(Pokemon.pokedex);
+        console.log(URLs);
         if (data.types.length === 1) {
           setPokemon({
             name: data.name,
@@ -106,16 +110,26 @@ const App = () => {
     return () => {
       //aqui va algo
     };
-  }, [Pokemon.pokedex]);
+  }, [Pokemon.pokedex, URLs]);
 
   return (
-    <main>
+    <main className="Kanto">
       <NavBar className="NavBar"></NavBar>
       {Loading === true ? (
         <section className="Pokedex">
           <section className="pestana_izquierda">
             <section className="insignia">
-              <img src={Kanto} alt="Kanto"></img>
+              <img
+                src={
+                  {
+                    Kanto: Kanto,
+                    Johto: Johto,
+                    Hoenn: Hoenn,
+                    Sinnoh: Sinnoh,
+                  }[Medalla]
+                }
+                alt="Kanto"
+              ></img>
             </section>
             <section className="Pokemon">
               <div>

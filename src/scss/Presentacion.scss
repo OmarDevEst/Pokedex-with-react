@@ -1,36 +1,79 @@
-main {
-  width: 100vw;
+.Presentacion {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   .MaxCon {
     background-color: #470505;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 862px;
     height: 677px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .RedCon {
       background-color: #c33c3c;
       width: 95%;
-      height: 610px;
+      height: 92%;
       display: flex;
       justify-content: center;
       align-items: center;
-      .WhiteCon {
+      gap: 30px;
+      padding: 12px;
+      .Foto {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
-        width: 330px;
-        height: 330px;
-        border-radius: 30px;
+        width: 290px;
+        height: 290px;
         img {
-          width: 290px;
-          height: 290px;
-          border-radius: 30px;
+          width: 80%;
+          height: 80%;
+        }
+      }
+      .datos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 290px;
+        .texto {
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+          background-color: #232323;
+          border-radius: 10px 10px 0px 0px;
+          height: 70%;
+          section {
+            border-radius: 12px;
+            background-color: #d9d9d9;
+            padding: 4px;
+          }
+        }
+        .Iconos {
+          height: 30%;
+          display: flex;
+          padding: auto;
+          justify-content: center;
+          align-items: center;
+          font-size: 35px;
+          background-color: #232323;
+          border-radius: 0px 0px 10px 10px;
+          .iconos_con {
+            width: 60%;
+            display: flex;
+            padding: 5px;
+            justify-content: space-evenly;
+            background-color: #d9d9d9;
+            border-radius: 10px;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
         }
       }
     }
